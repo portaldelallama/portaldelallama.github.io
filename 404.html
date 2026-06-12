@@ -3,23 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página no encontrada | Portal de la Llama</title>
-  <link rel="stylesheet" href="estilo.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Special+Elite&display=swap" rel="stylesheet">
+  <title>Camino no encontrado | Portal de la Llama</title>
+  <meta name="description" content="El sendero que buscas no está aquí, pero la llama te guía de vuelta al inicio.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@600;700&family=Courgette&display=swap" rel="stylesheet">
+  
   <style>
-    body { display: flex; justify-content: center; align-items: center; min-height: 100vh; text-align: center; }
-    .error-box { max-width: 600px; padding: 3rem; background: var(--fondo-caja); border: 2px solid var(--acento); border-radius: 8px; }
-    h1 { font-family: 'Cinzel', serif; color: var(--brillo); font-size: 3rem; margin-bottom: 1rem; }
-    p { font-family: 'Special Elite', cursive; color: var(--texto); font-size: 1.2rem; margin-bottom: 2rem; }
-    a { color: var(--acento); text-decoration: none; border: 1px solid var(--acento); padding: 0.8rem 1.5rem; border-radius: 4px; transition: 0.3s; }
-    a:hover { background: var(--acento); color: var(--fondo); }
+    :root {
+      --fondo: #0a0a0a;
+      --texto: #d4c5a9;
+      --fuego: #ff6b35;
+      --brillo: #ffcc00;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: 'Special Elite', cursive;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      /* CAMBIO: quitamos overflow: hidden para que haya scroll si es necesario */
+    }
+    
+    .video-fondo {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      z-index: -2;
+      object-fit: cover;
+    }
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: -1;
+    }
+    
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 204, 0, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+      animation: respirar 8s ease-in-out infinite;
+      z-index: -1;
+    }
+    
+    @keyframes respirar {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    
+    .error-container {
+      max-width: 700px;
+      z-index: 1;
+      animation: fadeIn 1s ease;
+      width: 100%;
+      /* Agregamos padding bottom para asegurar espacio */
+      padding-bottom: 3rem;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .numero-404 {
+      font-family: 'Cinzel', serif;
+      font-size: 8rem;
+      color: var(--fuego);
+      text-shadow: 0 0 30px rgba(255, 107, 53, 0.6), 0 0 60px rgba(255, 107, 53, 0.3);
+      line-height: 1;
+      margin-bottom: 1rem;
+      animation: latido 3s ease-in-out infinite;
+    }
+    
+    @keyframes latido {
+      0%, 100% { text-shadow: 0 0 30px rgba(255, 107, 53, 0.6); }
+      50% { text-shadow: 0 0 50px rgba(255, 107, 53, 0.9), 0 0 80px rgba(255, 107, 53, 0.5); }
+    }
+    
+    .titulo-error {
+      font-family: 'Courgette', cursive;
+      font-size: 2rem;
+      color: var(--brillo);
+      margin-bottom: 1.5rem;
+    }
+    
+    .mensaje-error {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      padding: 0 1rem;
+    }
+    
+    .mensaje-error strong {
+      color: var(--fuego);
+      font-weight: bold;
+    }
+    
+    .btn-volver {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: transparent;
+      border: 2px solid var(--fuego);
+      color: var(--fuego);
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 107, 53, 0.2);
+      margin-bottom: 2rem; /* Espacio antes del footer */
+    }
+    
+    .btn-volver:hover {
+      background: var(--fuego);
+      color: var(--fondo);
+      box-shadow: 0 0 25px rgba(255, 107, 53, 0.6);
+      transform: translateY(-2px);
+    }
+    
+    .icono-llama {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      animation: flotar 3s ease-in-out infinite;
+    }
+    
+    @keyframes flotar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .footer-simple {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 107, 53, 0.3);
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      .numero-404 { font-size: 5rem; }
+      .titulo-error { font-size: 1.5rem; }
+      .mensaje-error { font-size: 1.1rem; }
+      .btn-volver { padding: 0.8rem 2rem; font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="error-box">
-    <h1>404</h1>
-    <p>El camino que buscaste no está aquí...<br>pero la renovación te espera de vuelta al inicio.</p>
-    <a href="/">Volver al Portal</a>
+  <video autoplay muted loop playsinline class="video-fondo">
+    <source src="assets/video/arbol-energia.mp4" type="video/mp4">
+    <img src="assets/img/arbol-luz.jpg" alt="Árbol de luz">
+  </video>
+  <div class="overlay"></div>
+
+  <div class="error-container">
+    <div class="icono-llama">🔥</div>
+    <div class="numero-404">404</div>
+    <h1 class="titulo-error">El camino se desvaneció...</h1>
+    <p class="mensaje-error">
+      A veces, en la búsqueda, encontramos senderos que aún no están trazados.<br>
+      <strong>No es un final, es una invitación a volver al origen</strong> y elegir una nueva dirección.<br><br>
+      La llama siempre te guía de regreso.
+    </p>
+    <a href="/" class="btn-volver">✨ Volver al Portal</a>
+    
+    <div class="footer-simple">
+      <p>© 2026 Portal de la Llama — Capilla del Monte, Córdoba</p>
+    </div>
   </div>
 </body>
 </html>
