@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://portaldelallama.github.io/sitemap.xml
+
+# Bloquear archivos de desarrollo o backups si los hubiera
+Disallow: /assets/video/
+Disallow: /.git/
