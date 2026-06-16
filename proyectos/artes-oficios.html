@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Artes y Oficios | Portal de la Llama</title>
+  <meta name="description" content="Conservas, ahumados, pan, herramientas: transformar con las manos, preservar con sabiduría.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@600;700&family=Courgette&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../estilo.css">
+  <!-- FAVICONS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="../assets/img/site.webmanifest">
+  <style>
+    .page-header { text-align: center; padding: 10rem 2rem 4rem; z-index: 1; position: relative; }
+    .page-header h1 { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--brillo); text-shadow: 0 0 15px rgba(255, 204, 0, 0.6); margin-bottom: 0.5rem; }
+    .page-header p { font-family: 'Courgette', cursive; font-size: 1.5rem; color: var(--acento); }
+    .section-content { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+    .energy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; }
+    .energy-card { background: rgba(20, 18, 12, 0.70); padding: 2rem; border-radius: 8px; border: 1px solid rgba(127, 255, 0, 0.2); transition: all 0.3s ease; }
+    .energy-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(127, 255, 0, 0.2); border-color: var(--acento); }
+    .energy-card h4 { font-family: 'Cinzel', serif; color: var(--brillo); font-size: 1.3rem; margin-bottom: 1rem; }
+    .energy-card p, .energy-card ul { font-size: 0.95rem; line-height: 1.7; }
+    .energy-card ul { list-style: none; padding: 0; margin-top: 1rem; }
+    .energy-card ul li { padding: 0.4rem 0; padding-left: 1.2rem; position: relative; }
+    .energy-card ul li::before { content: "→"; position: absolute; left: 0; color: var(--acento); }
+    .philosophy-box { background: rgba(255, 204, 0, 0.08); border-left: 4px solid var(--brillo); padding: 2rem; margin: 3rem 0; border-radius: 0 8px 8px 0; font-style: italic; line-height: 1.8; }
+    .steps-list { list-style: none; padding: 0; margin: 2rem 0; counter-reset: step; }
+    .steps-list li { margin-bottom: 1.5rem; padding-left: 3rem; position: relative; line-height: 1.7; }
+    .steps-list li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 0; width: 2rem; height: 2rem; background: var(--fuego); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cinzel', serif; font-weight: bold; box-shadow: 0 0 10px rgba(255, 107, 53, 0.4); }
+    .patreon-cta { text-align: center; margin: 4rem 0 2rem; padding: 2.5rem; background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(127, 255, 0, 0.15) 100%); border: 2px solid var(--fuego); border-radius: 8px; backdrop-filter: blur(5px); }
+    @media (max-width: 768px) { .page-header h1 { font-size: 2.2rem; } .page-header p { font-size: 1.2rem; } .energy-grid { grid-template-columns: 1fr; } }
+    .overlay { background: rgba(0, 0, 0, 0.50); }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline class="video-fondo">
+    <source src="../assets/video/arbol-energia.mp4" type="video/mp4">
+    <img src="../assets/img/arbol-luz.jpg" alt="Árbol de luz">
+  </video>
+  <div class="overlay"></div>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../assets/img/cruz-orlada.png" alt="La Cruz Orlada" class="logo-icon">
+      <span class="logo-text">Portal de la Llama</span>
+    </div>
+    <a href="../index.html" class="btn-small">← Volver al Inicio</a>
+  </nav>
+  <header class="page-header">
+    <h1>🔥 Artes y Oficios: Transformar con las Manos</h1>
+    <p>"Lo que la tierra nos da, lo transformamos con respeto. Lo que sobra, lo preservamos con sabiduría."</p>
+  </header>
+  <section class="section-content">
+    <div class="philosophy-box">
+      <p><strong>Transformar no es industrializar, es honrar.</strong> Cada conserva, cada pan, cada herramienta hecha a mano lleva la intención de quien la creó. Los oficios ancestrales no son nostalgia: son tecnologías probadas por siglos que nos enseñan a usar lo justo, a desperdiciar nada y a compartir lo esencial.</p>
+    </div>
+    <h2 class="section-title">Técnicas que Preservan y Nutren</h2>
+    <div class="energy-grid">
+      <div class="energy-card">
+        <h4>🥫 Conservas y Mermeladas</h4>
+        <p>Almacenar la abundancia estacional para disfrutarla todo el año, sin aditivos ni plásticos.</p>
+        <ul>
+          <li>Método de baño maría para envasado seguro</li>
+          <li>Proporciones de azúcar/ácido según fruta</li>
+          <li>Esterilización de frascos y tapas</li>
+          <li>Etiquetado con fecha y contenido para rotación</li>
+        </ul>
+      </div>
+      <div class="energy-card">
+        <h4>🍖 Ahumados y Embutidos</h4>
+        <p>Conservación por deshidratación y humo frío/caliente, con maderas aromáticas locales.</p>
+        <ul>
+          <li>Selección de maderas: algarrobo, chañar, eucalipto</li>
+          <li>Control de temperatura y tiempo según tipo de carne</li>
+          <li>Curado con sal marina y especias naturales</li>
+          <li>Almacenamiento en lugar fresco y ventilado</li>
+        </ul>
+      </div>
+      <div class="energy-card">
+        <h4>🍞 Pan Casero y Fermentados</h4>
+        <p>Masa madre, fermentación lenta y horneado en horno de barro: sabor, nutrición y tradición.</p>
+        <ul>
+          <li>Cultivo y mantenimiento de masa madre</li>
+          <li>Proporciones de harina, agua y sal según tipo de pan</li>
+          <li>Tiempos de fermentación y signos de punto óptimo</li>
+          <li>Horneado en horno de barro: temperatura y vapor</li>
+        </ul>
+      </div>
+      <div class="energy-card">
+        <h4>🔧 Herramientas Manuales y Reparación</h4>
+        <p>Construir, afilar y reparar herramientas con materiales locales: autonomía y durabilidad.</p>
+        <ul>
+          <li>Selección de maderas duras para mangos</li>
+          <li>Afilado de cuchillos, hachas y podones con piedras</li>
+          <li>Uniones tradicionales: cuñas, tarugos, amarres</li>
+          <li>Mantenimiento preventivo: limpieza, engrase, almacenamiento</li>
+        </ul>
+      </div>
+    </div>
+    <h2 class="section-title">Primeros Pasos: De la Materia Prima al Producto</h2>
+    <ol class="steps-list">
+      <li><strong>Empieza con lo que tenés:</strong> No esperes tener el horno perfecto o la despensa ideal. Una olla, un frasco y una receta simple son suficientes para comenzar.</li>
+      <li><strong>Respeta los tiempos naturales:</strong> La fermentación, el secado, el ahumado: todos requieren paciencia. Observa, huele, prueba. La naturaleza no se apura, y nosotros tampoco.</li>
+      <li><strong>Documenta tus procesos:</strong> Anota proporciones, tiempos, temperaturas. Cada intento es un aprendizaje, y cada error es una lección para la próxima vez.</li>
+      <li><strong>Comparte lo que sobra:</strong> La abundancia no es para acumular, es para circular. Truequea, regala, enseña. El conocimiento se multiplica cuando se comparte.</li>
+      <li><strong>Honra el origen:</strong> Cada ingrediente, cada material, tiene una historia. Agradece a quien lo cultivó, a la tierra que lo dio, a tus manos que lo transformaron.</li>
+    </ol>
+    <h2 class="section-title">Visión de Conjunto</h2>
+    <p>Estos oficios no son tareas aisladas, son eslabones de una cadena de cuidado. La huerta provee; las manos transforman; la comunidad comparte. En el marco del proyecto <em>Jardín del Cielo</em>, las artes y oficios son el puente entre la producción primaria y la vida comunitaria. Son la práctica que convierte la abundancia en bienestar, y el bienestar en gratitud.</p>
+    <div class="patreon-cta">
+      <h3 style="font-family: 'Cinzel', serif; color: var(--brillo); margin-bottom: 1rem;">📥 Profundización Técnica y Recetarios</h3>
+      <p style="margin-bottom: 1.5rem;">La web muestra el camino visible. En Patreon encontrás el contenido completo para implementar con seguridad y precisión:</p>
+      <ul style="list-style: none; padding: 0; max-width: 600px; margin: 0 auto 2rem; text-align: left;">
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);">📖 Recetarios completos: conservas, ahumados, pan, fermentados</li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);">🔪 Guías de herramientas: construcción, afilado, mantenimiento</li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);">🌡️ Tablas de temperaturas y tiempos según método</li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);">⚠️ Guías de seguridad alimentaria y conservación</li>
+        <li style="padding: 0.6rem 0;">📸 Bitácora de elaboración: errores, ajustes y aciertos</li>
+      </ul>
+      <a href="https://www.patreon.com/c/raulhora" target="_blank" class="btn">🔥 Acceder al contenido completo en Patreon</a>
+      <p style="font-size: 0.85rem; margin-top: 1rem; opacity: 0.8; font-style: italic;">Este material es técnico y práctico. Se comparte para quienes desean implementar con responsabilidad y conocimiento real.</p>
+    </div>
+  </section>
+  <footer class="footer" style="margin-top: 0; border-top: 1px solid rgba(127, 255, 0, 0.3);">
+    <div class="container" style="text-align: center; padding: 2rem 0;">
+      <p style="font-size: 0.9rem; color: var(--texto);">© 2026 Portal de la Llama | Camino a la Autosuficiencia</p>
+      <p style="font-size: 0.85rem; color: var(--texto); opacity: 0.8; margin-top: 0.5rem;">Hecho con ❤️ y 🔥 en Capilla del Monte, Córdoba, Argentina</p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

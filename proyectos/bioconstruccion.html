@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bioconstrucción | Portal de la Llama</title>
+  <meta name="description" content="Construir con la tierra: adobe, superadobe, horno de barro. Diálogo con la naturaleza para habitar con conciencia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@600;700&family=Courgette&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../estilo.css">
+  <!-- FAVICONS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="../assets/img/site.webmanifest">
+  <style>
+    .page-header { text-align: center; padding: 10rem 2rem 4rem; z-index: 1; position: relative; }
+    .page-header h1 { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--brillo); text-shadow: 0 0 15px rgba(255, 204, 0, 0.6); margin-bottom: 0.5rem; }
+    .page-header p { font-family: 'Courgette', cursive; font-size: 1.5rem; color: var(--acento); }
+    .section-content { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+    .energy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0; }
+    .energy-card { background: rgba(20, 18, 12, 0.70); padding: 2rem; border-radius: 8px; border: 1px solid rgba(127, 255, 0, 0.2); transition: all 0.3s ease; }
+    .energy-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(127, 255, 0, 0.2); border-color: var(--acento); }
+    .energy-card h4 { font-family: 'Cinzel', serif; color: var(--brillo); font-size: 1.3rem; margin-bottom: 1rem; }
+    .energy-card p, .energy-card ul { font-size: 0.95rem; line-height: 1.7; }
+    .energy-card ul { list-style: none; padding: 0; margin-top: 1rem; }
+    .energy-card ul li { padding: 0.4rem 0; padding-left: 1.2rem; position: relative; }
+    .energy-card ul li::before { content: "→"; position: absolute; left: 0; color: var(--acento); }
+    .philosophy-box { background: rgba(255, 204, 0, 0.08); border-left: 4px solid var(--brillo); padding: 2rem; margin: 3rem 0; border-radius: 0 8px 8px 0; font-style: italic; line-height: 1.8; }
+    .steps-list { list-style: none; padding: 0; margin: 2rem 0; counter-reset: step; }
+    .steps-list li { margin-bottom: 1.5rem; padding-left: 3rem; position: relative; line-height: 1.7; }
+    .steps-list li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 0; width: 2rem; height: 2rem; background: var(--fuego); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cinzel', serif; font-weight: bold; box-shadow: 0 0 10px rgba(255, 107, 53, 0.4); }
+    .patreon-cta { text-align: center; margin: 4rem 0 2rem; padding: 2.5rem; background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(127, 255, 0, 0.15) 100%); border: 2px solid var(--fuego); border-radius: 8px; backdrop-filter: blur(5px); }
+    @media (max-width: 768px) { .page-header h1 { font-size: 2.2rem; } .page-header p { font-size: 1.2rem; } .energy-grid { grid-template-columns: 1fr; } }
+    .overlay { background: rgba(0, 0, 0, 0.50); }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline class="video-fondo">
+    <source src="../assets/video/arbol-energia.mp4" type="video/mp4">
+    <img src="../assets/img/arbol-luz.jpg" alt="Árbol de luz">
+  </video>
+  <div class="overlay"></div>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../assets/img/cruz-orlada.png" alt="La Cruz Orlada" class="logo-icon">
+      <span class="logo-text">Portal de la Llama</span>
+    </div>
+    <a href="../index.html" class="btn-small">← Volver al Inicio</a>
+  </nav>
+  <header class="page-header">
+    <h1>🏡 Bioconstrucción: Habitar con Conciencia</h1>
+    <p>"La tierra que pisamos es la misma que nos cobija. Construir con ella es dialogar con la Madre."</p>
+  </header>
+  <section class="section-content">
+    <div class="philosophy-box">
+      <p><strong>Construir no es dominar, es integrarse.</strong> La bioconstrucción no busca imponer formas a la naturaleza, sino aprender de sus ciclos, sus materiales y su sabiduría. El adobe, el superadobe, el horno de barro: son tecnologías ancestrales que nos recuerdan que el hogar no es una mercancía, sino un refugio vivo que respira con nosotros.</p>
+    </div>
+    <h2 class="section-title">Técnicas que Dialogan con la Tierra</h2>
+    <div class="energy-grid">
+      <div class="energy-card">
+        <h4>🧱 Adobe Tradicional</h4>
+        <p>Tierra, arena, paja y agua: materiales locales que regulan temperatura y humedad naturalmente.</p>
+        <ul>
+          <li>Proporciones óptimas según tipo de suelo</li>
+          <li>Moldes y secado al sol</li>
+          <li>Revoques con barro, cal o arena fina</li>
+          <li>Mantenimiento anual: reparación de grietas</li>
+        </ul>
+      </div>
+      <div class="energy-card">
+        <h4>🌀 Superadobe / Earthbag</h4>
+        <p>Bolsas de polipropileno rellenas de tierra apisonada, con alambre de púa entre capas para resistencia sísmica.</p>
+        <ul>
+          <li>Estructuras curvas que distribuyen cargas</li>
+          <li>Ideal para cúpulas, bóvedas y muros portantes</li>
+          <li>Bajo costo, alta resistencia térmica</li>
+          <li>Técnica validada por Cal-Earth Institute</li>
+        </ul>
+      </div>
+      <div class="energy-card">
+        <h4>🔥 Horno de Barro y Secador Solar</h4>
+        <p>Cocción de pan, conservación de alimentos y calor ambiental con energía solar acumulada.</p>
+        <ul>
+          <li>Diseño de masa térmica para retención de calor</li>
+          <li>Chimenea de tiro natural para eficiencia</li>
+          <li>Secador solar integrado para frutas y hierbas</li>
+          <li>Uso de materiales locales: arcilla, arena, paja</li>
+        </ul>
+      </div>
+      <div class="energy-card">
+        <h4>🪵 Tinglado y Estructuras Ligeras</h4>
+        <p>Espacios multifuncionales con madera reciclada, caña colihue y uniones tradicionales.</p>
+        <ul>
+          <li>Techos inclinados para captación de agua</li>
+          <li>Paredes permeables para ventilación cruzada</li>
+          <li>Uniones con cuñas, sin clavos ni pegamentos</li>
+          <li>Integración con huerta y zona de elaboración</li>
+        </ul>
+      </div>
+    </div>
+    <h2 class="section-title">Primeros Pasos: De la Idea a la Pared</h2>
+    <ol class="steps-list">
+      <li><strong>Observa tu terreno:</strong> Analiza orientación solar, vientos predominantes, tipo de suelo y drenaje. Una pala y un nivel de burbuja son suficientes para empezar.</li>
+      <li><strong>Comienza con lo pequeño:</strong> Un banco de adobe, un horno de barro para pan o un muro de contención son proyectos ideales para aprender sin presión.</li>
+      <li><strong>Prepara la mezcla con conciencia:</strong> Tierra + arena + paja + agua en proporciones que varían según tu suelo. Prueba con "bolitas" que no se agrieten al secar.</li>
+      <li><strong>Construye en equipo:</strong> La bioconstrucción es comunitaria por naturaleza. Invita a vecinos, comparte herramientas, aprende juntos.</li>
+      <li><strong>Registra y ajusta:</strong> Toma fotos, anota proporciones, registra cómo responde la estructura a lluvia, sol y viento. La tierra enseña con el tiempo.</li>
+    </ol>
+    <h2 class="section-title">Visión de Conjunto</h2>
+    <p>Estas técnicas no son fines en sí mismas, sino puentes para recuperar el <strong>diálogo con los ciclos de la tierra</strong>. Cuando construimos con materiales locales, reducimos la huella ecológica, fortalecemos la economía circular y creamos espacios que respiran con nosotros. En el marco del proyecto <em>Jardín del Cielo</em>, la bioconstrucción es el esqueleto físico que sostiene la huerta, la cocina comunitaria, los talleres y la vida en armonía. Es la materia que hace posible la filosofía.</p>
+    <div class="patreon-cta">
+      <h3 style="font-family: 'Cinzel', serif; color: var(--brillo); margin-bottom: 1rem;">📥 Profundización Técnica y Planos</h3>
+      <p style="margin-bottom: 1.5rem;">La web muestra el camino visible. En Patreon encontrás el contenido completo para implementar con seguridad y precisión:</p>
+      <ul style="list-style: none; padding: 0; max-width: 600px; margin: 0 auto 2rem; text-align: left;">
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);">📐 Planos detallados de estructuras en adobe y superadobe</li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);">🧪 Tablas de mezclas según tipo de suelo regional</li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);">🛠️ Lista de herramientas básicas y proveedores locales</li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);">⚠️ Guías de seguridad estructural y mantenimiento</li>
+        <li style="padding: 0.6rem 0;">📸 Bitácora de construcción real: errores, ajustes y aciertos</li>
+      </ul>
+      <a href="https://www.patreon.com/c/raulhora" target="_blank" class="btn">🔥 Acceder al contenido completo en Patreon</a>
+      <p style="font-size: 0.85rem; margin-top: 1rem; opacity: 0.8; font-style: italic;">Este material es técnico y práctico. Se comparte para quienes desean implementar con responsabilidad y conocimiento real.</p>
+    </div>
+  </section>
+  <footer class="footer" style="margin-top: 0; border-top: 1px solid rgba(127, 255, 0, 0.3);">
+    <div class="container" style="text-align: center; padding: 2rem 0;">
+      <p style="font-size: 0.9rem; color: var(--texto);">© 2026 Portal de la Llama | Camino a la Autosuficiencia</p>
+      <p style="font-size: 0.85rem; color: var(--texto); opacity: 0.8; margin-top: 0.5rem;">Hecho con ❤️ y 🔥 en Capilla del Monte, Córdoba, Argentina</p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

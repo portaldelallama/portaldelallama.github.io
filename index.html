@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- ======================================== -->
-  <!-- INICIO DEL HEAD - PORTAL DE LA LLAMA    -->
-  <!-- ======================================== -->
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <!-- SEO Primario -->
   <title>Portal de la Llama | Un Camino hacia la Autosuficiencia</title>
   <meta name="description" content="Proyectos prácticos, transformación personal y conexión con la Naturaleza. Autosuficiencia con base espiritual en Córdoba, Argentina.">
   <meta name="keywords" content="autosuficiencia, espiritualidad, transformación, permacultura, bioconstrucción, energía renovable, Córdoba, Argentina, Portal de la Llama, Cruz Orlada">
@@ -17,14 +12,12 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://portaldelallama.github.io/">
   
-  <!-- FAVICONS (ruta a assets/img/) -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
   <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
   <link rel="manifest" href="assets/img/site.webmanifest">
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Portal de la Llama | Un Camino hacia la Autosuficiencia">
   <meta property="og:description" content="Espacio comunitario de autosuficiencia con base espiritual. Proyectos prácticos, transformación personal y conexión con la Naturaleza.">
@@ -33,13 +26,11 @@
   <meta property="og:site_name" content="Portal de la Llama">
   <meta property="og:locale" content="es_AR">
 
-  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Portal de la Llama">
   <meta name="twitter:description" content="Autosuficiencia práctica con base espiritual. Córdoba, Argentina.">
   <meta name="twitter:image" content="https://portaldelallama.github.io/assets/img/og-image.jpg">
   
-  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,39 +39,84 @@
     "description": "Un Camino hacia la Autosuficiencia: proyectos prácticos, transformación personal y conexión con la Naturaleza",
     "url": "https://portaldelallama.github.io/",
     "image": "https://portaldelallama.github.io/assets/img/og-image.jpg",
-    "author": {
-      "@type": "Person",
-      "name": "portaldelallama"
-    },
-    "publisher": {
-      "@type": "Person",
-      "name": "portaldelallama"
-    },
+    "author": { "@type": "Person", "name": "portaldelallama" },
+    "publisher": { "@type": "Person", "name": "portaldelallama" },
     "datePublished": "2026-01-01",
     "inLanguage": "es-AR"
   }
   </script>
 
-  <!-- Fuentes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@600;700&family=Courgette&display=swap" rel="stylesheet">
-  
-  <!-- Tu CSS principal -->
   <link rel="stylesheet" href="estilo.css">
   
-  <!-- ======================================== -->
-  <!-- FIN DEL HEAD - PORTAL DE LA LLAMA       -->
-  <!-- ======================================== -->
+  <!-- CSS ADICIONAL PARA VIDEO + IMAGEN Y ZONAS CON ICONOS -->
+  <style>
+    /* Grid para video + imagen lado a lado */
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+      align-items: start;
+    }
+    .media-item {
+      background: rgba(0,0,0,0.3);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid var(--acento);
+      box-shadow: 0 0 20px rgba(127, 255, 0, 0.2);
+    }
+    .media-item img,
+    .media-item iframe {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .media-item iframe {
+      aspect-ratio: 16/9;
+      border: none;
+    }
+    .media-caption {
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 0.8rem;
+      opacity: 0.9;
+      font-style: italic;
+    }
+    
+    /* Iconos en zonas - mismo estilo que proyecto-card */
+    .zona-card .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+      text-align: center;
+      display: block;
+    }
+    .zona-card h5 {
+      text-align: center;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+      padding-bottom: 0.5rem;
+    }
+    
+    /* Responsive: 1 columna en móvil */
+    @media (max-width: 768px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+      .zona-card .card-icon {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Video de fondo del árbol -->
   <video autoplay muted loop playsinline class="video-fondo">
     <source src="assets/video/arbol-energia.mp4" type="video/mp4">
     <img src="assets/img/arbol-luz.jpg" alt="Árbol de luz">
   </video>
   <div class="overlay"></div>
 
-  <!-- Navegación -->
   <nav class="navbar">
     <div class="logo">
       <img src="assets/img/cruz-orlada.png" alt="La Cruz Orlada" class="logo-icon">
@@ -92,12 +128,11 @@
       <li><a href="#manifiesto">El Camino</a></li>
       <li><a href="#agradecer-puente">Espiritualidad</a></li>
       <li><a href="#autosuficiencia">Autosuficiencia</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#comunidad">Comunidad</a></li>
+      <li><a href="#proyectos">Jardín del Cielo</a></li>
+      <li><a href="#comunidad">Biblioteca</a></li>
     </ul>
   </nav>
 
-  <!-- Header/Hero - VIDEO DEL ÁGUILA -->
   <header class="hero" id="inicio">
     <div class="hero-container-vertical">
       <div class="hero-video-box">
@@ -107,15 +142,15 @@
         </video>
       </div>
       <div class="hero-content-box">
-        <h1 class="titulo-principal">Comencemos la Renovación</h1>
-        <h2 class="subtitulo">La Transformación del Águila</h2>
+        <h1 class="titulo-principal">Un Camino hacia la Autosuficiencia</h1>
+        <h2 class="subtitulo">Comencemos la Renovación: La Transformación del Águila</h2>
         <p class="frase-central">"El único camino que existe, es volver a las Fuentes<br>donde encontraremos el <span class="resaltado">VERDADERO SENTIDO de la VIDA</span>"</p>
         <a href="#manifiesto" class="btn-cta">Descubre el Camino ↓</a>
       </div>
     </div>
   </header>
 
-  <!-- Sección Manifiesto -->
+  <!-- Sección Manifiesto (EXISTENTE) -->
   <section class="manifiesto-section" id="manifiesto">
     <div class="container">
       <div class="manifiesto-box">
@@ -139,7 +174,7 @@
     </div>
   </section>
 
-  <!-- Sección Tiempo de Agradecer (CON PUENTE) -->
+  <!-- Sección Tiempo de Agradecer (EXISTENTE) -->
   <section class="agradecer-section" id="agradecer-puente">
     <div class="container">
       <h2 class="section-title">Tiempo de Agradecer</h2>
@@ -156,22 +191,20 @@
           <p>Este es nuestro Tiempo, este es nuestro Regalo!!!</p>
           <p class="firma">Bienaventurados aquellos que sin Ver, han Creído.<br>Bienaventurados aquellos que en la Oscuridad, Aprendieron a Amar!!!</p>
           
-          <!-- PUENTE ESPIRITUALIDAD -->
           <div class="puente-espiritualidad" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--acento); text-align: center;">
-            <p style="margin-bottom: 1rem; font-style: italic;">¿Querés profundizar en estas historias?</p>
+            <p style="margin-bottom: 1rem; font-style: italic;">¿Quieres profundizar?</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
               <a href="https://cronicasdeluritorco.github.io/" target="_blank" class="btn">📖 Visita Crónicas del Uritorco: Investigación Personal</a>
               <a href="https://www.patreon.com/c/raulhora" target="_blank" class="btn btn-secundario">🔥 Patreon Espiritualidad</a>
             </div>
           </div>
-          <!-- FIN PUENTE -->
           
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sección Autosuficiencia Práctica -->
+  <!-- Sección Autosuficiencia Práctica (EXISTENTE) -->
   <section class="proyectos-section" id="autosuficiencia">
     <div class="container">
       <h2 class="section-title">Autosuficiencia Práctica</h2>
@@ -217,7 +250,282 @@
     </div>
   </section>
 
-  <!-- Sección La Transformación del Águila -->
+  <!-- SECCIÓN JARDÍN DEL CIELO (ACTUALIZADA - 3 Pilares + 9 Zonas) -->
+  <section class="jardin-cielo-section" id="proyectos">
+    <div class="container">
+      <div class="jardin-header">
+        <h2 class="section-title">Proyecto: Jardín del Cielo</h2>
+        <p class="section-subtitle">Granja Ecológica Didáctica - Espacio Comunitario Autosuficiente</p>
+      </div>
+
+      <!-- INTRODUCCIÓN -->
+      <div class="jardin-intro">
+        <p class="intro-text">"Imagina un espacio donde la naturaleza, el conocimiento y la comunidad se unen para crear un modelo autosuficiente que inspire a las futuras generaciones."</p>
+        <p>Esto no es solo un simple proyecto; es un sueño que busca plasmarse en la realidad. Ahi entras Tú: Una granja ecológica diseñada para fomentar la sostenibilidad, la educación integral y la innovación, creando soluciones para un mundo más equitativo y solidario. <strong>Nace desde la necesidad de impulsarte en base a un cometido tuyo; interno y rofundo donde no solo sirva como sustento, sino como verdadera opción de convivencia, donde el esfuerzo comunitario sea el cimiento, sea el próposito.</strong></p>
+        <p style="text-align: center; margin-top: 1.5rem; font-style: italic; color: var(--brillo);">
+          "El único camino que existe, es volver a las Fuentes; donde encontraremos el VERDADERO SENTIDO de la VIDA."
+        </p>
+      </div>
+
+      <!-- LOS 3 PILARES -->
+      <h3 class="pilares-title">Los 3 Pilares Fundamentales</h3>
+      <div class="pilares-grid">
+        <div class="pilar-card tierra">
+          <div class="pilar-icon-wrapper">🌱</div>
+          <h4>Pilar Tierra</h4>
+          <p class="pilar-subtitle">Producción Primaria</p>
+          <ul class="pilar-list">
+            <li>Huerta Orgánica + Animales de Granja</li>
+            <li>Energías Renovables (solar, eólica, biogás)</li>
+            <li>Edificios Sostenibles (bioconstrucción)</li>
+          </ul>
+        </div>
+        
+        <div class="pilar-card fuego">
+          <div class="pilar-icon-wrapper">🔥</div>
+          <h4>Pilar Fuego</h4>
+          <p class="pilar-subtitle">Transformación e Intercambio</p>
+          <ul class="pilar-list">
+            <li>Elaboración: conservas, ahumados, pan, quesos</li>
+            <li>Eventos culturales, talleres, ferias</li>
+            <li>Turismo y Alojamiento (cabañas, camping)</li>
+          </ul>
+        </div>
+        
+        <div class="pilar-card vida">
+          <div class="pilar-icon-wrapper">💚</div>
+          <h4>Pilar Vida</h4>
+          <p class="pilar-subtitle">Conocimiento y Armonía</p>
+          <ul class="pilar-list">
+            <li>Investigación y Desarrollo Tecnológico</li>
+            <li>Educación Waldorf + Terapias Alternativas</li>
+            <li>Plantas Medicinales + Recreación</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- LA GRÁFICA COMPLETA -->
+      <div class="grafica-container">
+        <h3 class="grafica-title">Esquema Integral del Proyecto</h3>
+        <p style="text-align: center; margin-bottom: 1.5rem; opacity: 0.9;">Las 9 zonas funcionales se interconectan bajo los 3 pilares fundamentales</p>
+        
+        <div class="grafica-wrapper">
+          <img src="assets/img/esquema-jardin-cielo.png" alt="Esquema explicativo del Espacio Comunitario Autosuficiente - Jardín del Cielo" class="grafica-img">
+          <p class="grafica-caption">Esquema que representa la dinámica interna: producción, educación, comunidad, turismo e investigación integrados</p>
+        </div>
+
+      </div>
+
+<!-- VIDEO LOCAL + IMAGEN (LADO A LADO) -->
+<div class="media-grid">
+  
+  <!-- Video MP4 alojado en GitHub -->
+  <div class="media-item">
+    <video controls preload="metadata" poster="assets/img/jardin-cielo-panoramica.jpg">
+      <source src="assets/video/jardin-cielo-presentacion.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
+    <p class="media-caption">Presentación del proyecto Jardín del Cielo</p>
+  </div>
+  
+  <!-- Imagen de portada (NUEVA IMAGEN PANORÁMICA) -->
+  <div class="media-item">
+    <img src="assets/img/jardin-cielo-panoramica.jpg" alt="Jardín del Cielo - Biodomos y valle sustentable">
+    <p class="media-caption">Visión integral del Espacio Comunitario Autosuficiente</p>
+  </div>
+  
+</div>
+
+          <!-- LAS 9 ZONAS -->
+      <h3 class="zonas-title">Las 9 Zonas Funcionales</h3>
+      
+       <!-- DIAGRAMA DE FLUJO - GRAFICANDO IDEAS -->
+      <div style="text-align: center; margin: 3rem 0;">
+        <h3 class="grafica-title">Esquema Explicativo del Sistema</h3>
+        <p style="text-align: center; margin-bottom: 2rem; opacity: 0.9;">Interconexión entre producción, intercambio, turismo e investigación</p>
+        
+        <div style="background: rgba(255,255,255,0.95); padding: 2rem; border-radius: 8px; box-shadow: 0 5px 25px rgba(0,0,0,0.3); display: inline-block; max-width: 100%;">
+          <img src="assets/img/imagen1.png" alt="Diagrama de flujo - Graficando Ideas: Esquema explicativo del Espacio Comunitario Autosuficiente" style="max-width: 100%; height: auto; border-radius: 4px;">
+        </div>
+        <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8; font-style: italic;">Flujograma que muestra la dinámica del Espacio Comunitario: desde la planificación interna hasta el intercambio en nodos</p>
+      </div>
+
+      <!-- LAS 6 ZONAS FUNCIONALES -->
+      <h3 class="zonas-title">Las 6 Zonas Funcionales</h3>
+      <div class="zonas-grid">
+        
+        <!-- Zona 1: Turismo -->
+        <div class="zona-card">
+          <div class="card-icon">🏕️</div>
+          <h5>1. Zona Turismo</h5>
+          <p>Servicios de alojamiento y conexión con la naturaleza en un entorno sustentable.</p>
+          <ul style="list-style: none; padding: 0; margin-top: 0.8rem; font-size: 0.9rem;">
+            <li style="padding: 0.3rem 0;">🏡 <strong>Dormis:</strong> Alojamiento compartido estilo hostel</li>
+            <li style="padding: 0.3rem 0;">🛖 <strong>Cabañas:</strong> Espacios privados de bioconstrucción</li>
+            <li style="padding: 0.3rem 0;">⛺ <strong>Camping:</strong> Áreas equipadas para acampar</li>
+            <li style="padding: 0.3rem 0;">🍽️ <strong>Servicio de pensión:</strong> Media pensión o pensión completa</li>
+            <li style="padding: 0.3rem 0;"> <strong>Visitas guiadas:</strong> Recorridos por la granja y sus sectores</li>
+          </ul>
+        </div>
+
+        <!-- Zona 2: Desarrollo e Investigación -->
+        <div class="zona-card">
+          <div class="card-icon">🔬</div>
+          <h5>2. Zona de Desarrollo e Investigación</h5>
+          <p>Espacio dedicado a la experimentación y búsqueda de soluciones innovadoras.</p>
+          <ul style="list-style: none; padding: 0; margin-top: 0.8rem; font-size: 0.9rem;">
+            <li style="padding: 0.3rem 0;">⚡ <strong>Energía Libre:</strong> Investigación en sistemas energéticos avanzados</li>
+            <li style="padding: 0.3rem 0;">🛏️ <strong>Camas Médicas Cuánticas:</strong> Sanación mediante frecuencias y resonancia energética</li>
+            <li style="padding: 0.3rem 0;">🧬 <strong>Replicadores de Alimentos:</strong> Reproducción de carne a nivel molecular sin sacrificio animal</li>
+            <li style="padding: 0.3rem 0;">🧪 <strong>Nuevos materiales:</strong> Experimentación con materiales de construcción sustentables</li>
+            <li style="padding: 0.3rem 0;">💧 <strong>Purificación de agua:</strong> Sistemas más eficientes de filtrado y tratamiento</li>
+            <li style="padding: 0.3rem 0;">🌌 <strong>Amanecer Galáctico:</strong> Integración de tecnologías emergentes alineadas con la nueva era</li>
+          </ul>
+        </div>
+
+        <!-- Zona 3: Huerta Orgánica y Animales -->
+        <div class="zona-card">
+          <div class="card-icon">🌱</div>
+          <h5>3. Zona de Huerta Orgánica y Animales de Granja</h5>
+          <p>Producción primaria de alimentos orgánicos y crianza responsable de animales.</p>
+          <ul style="list-style: none; padding: 0; margin-top: 0.8rem; font-size: 0.9rem;">
+            <li style="padding: 0.3rem 0;">🥬 <strong>Huerta orgánica:</strong> Hortalizas, verduras y frutas de estación sin agroquímicos</li>
+            <li style="padding: 0.3rem 0;">♻️ <strong>Compostaje:</strong> Reciclaje de residuos orgánicos para abono natural</li>
+            <li style="padding: 0.3rem 0;">🏡 <strong>Invernadero:</strong> Producción durante todo el año</li>
+            <li style="padding: 0.3rem 0;">🐔 <strong>Aves:</strong> Gallinas, patos, codornices (huevos y carne)</li>
+            <li style="padding: 0.3rem 0;">🐇 <strong>Mamíferos:</strong> Conejos, cerdos, ovejas, vacas</li>
+            <li style="padding: 0.3rem 0;">🐝 <strong>Apicultura:</strong> Abejas para miel, polen, propóleos y polinización</li>
+            <li style="padding: 0.3rem 0;">🐟 <strong>Estanque:</strong> Peces (acuaponía integrada)</li>
+          </ul>
+        </div>
+
+        <!-- Zona 4: SCUM + Restaurant -->
+        <div class="zona-card">
+          <div class="card-icon">🎪</div>
+          <h5>4. SCUM + Restaurant</h5>
+          <p>Sector multifuncional: Eventos, Recreación, Armonización, Terapias + Producción y Elaboración.</p>
+          <ul style="list-style: none; padding: 0; margin-top: 0.8rem; font-size: 0.9rem;">
+            <li style="padding: 0.3rem 0;">🏛️ <strong>Salón de Usos Múltiples (SCUM):</strong> Espacio versátil para actividades comunitarias</li>
+            <li style="padding: 0.3rem 0;">🎭 <strong>Eventos culturales:</strong> Seminarios, talleres, ferias y exposiciones</li>
+            <li style="padding: 0.3rem 0;">🧘 <strong>Terapias Alternativas:</strong> Armonización, sanaciones y bienestar integral</li>
+            <li style="padding: 0.3rem 0;">🍽️ <strong>Restaurant:</strong> Servicio de comidas en época de turismo (todo el año)</li>
+            <li style="padding: 0.3rem 0;">🍯 <strong>Elaboración de conservas:</strong> Dulces, mermeladas, quesos, embutidos</li>
+            <li style="padding: 0.3rem 0;">🍞 <strong>Panadería y cocina:</strong> Pan casero, comidas preparadas, licores</li>
+            <li style="padding: 0.3rem 0;">🎓 <strong>Capacitación laboral:</strong> Jornadas de formación en oficios y calidad de productos</li>
+          </ul>
+        </div>
+
+        <!-- Zona 5: Energías Renovables -->
+        <div class="zona-card">
+          <div class="card-icon">⚡</div>
+          <h5>5. Zona de Energías Renovables</h5>
+          <p>Sistemas de energía limpia y autosuficiencia energética para todo el predio.</p>
+          <ul style="list-style: none; padding: 0; margin-top: 0.8rem; font-size: 0.9rem;">
+            <li style="padding: 0.3rem 0;">☀️ <strong>Energía solar:</strong> Celdas fotovoltaicas caseras y paneles solares</li>
+            <li style="padding: 0.3rem 0;">💨 <strong>Energía eólica:</strong> Generadores de viento</li>
+            <li style="padding: 0.3rem 0;">🔥 <strong>Biogás:</strong> Producción de gas a partir de residuos orgánicos</li>
+            <li style="padding: 0.3rem 0;">🌡️ <strong>Geotermia:</strong> Aprovechamiento del calor terrestre</li>
+            <li style="padding: 0.3rem 0;"> <strong>Calefones solares:</strong> Agua caliente sustentable</li>
+            <li style="padding: 0.3rem 0;">💧 <strong>Biofiltros:</strong> Sistemas naturales de purificación de agua</li>
+            <li style="padding: 0.3rem 0;">🚽 <strong>Sanitarios secos:</strong> Baños ecológicos sin agua</li>
+          </ul>
+        </div>
+
+              <!-- Zona 6: Edificios Sostenibles -->
+        <div class="zona-card">
+          <div class="card-icon">🏗️</div>
+          <h5>6. Edificios Sostenibles</h5>
+          <p>Construcciones con materiales naturales y técnicas de bioconstrucción ancestrales.</p>
+          <ul style="list-style: none; padding: 0; margin-top: 0.8rem; font-size: 0.9rem;">
+            <li style="padding: 0.3rem 0;">🧱 <strong>Superadobe:</strong> Técnica de construcción con tierra embolsada</li>
+            <li style="padding: 0.3rem 0;">🏡 <strong>Adobe:</strong> Ladrillos de barro y paja secados al sol</li>
+            <li style="padding: 0.3rem 0;">🏭 <strong>Tinglado:</strong> Estructuras comunitarias techadas</li>
+            <li style="padding: 0.3rem 0;">🔥 <strong>Horno de barro:</strong> Para pan y comidas tradicionales</li>
+            <li style="padding: 0.3rem 0;">☀️ <strong>Secador solar:</strong> Deshidratador de alimentos</li>
+            <li style="padding: 0.3rem 0;">👨‍🍳 <strong>Cocina comunitaria:</strong> Equipada para elaboración de comidas</li>
+            <li style="padding: 0.3rem 0;">🚰 <strong>Depósitos de agua:</strong> Almacenamiento y distribución</li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- FIN DE LAS 6 ZONAS -->
+	  
+      <!-- TESTIMONIO / HISTORIA -->
+      <div class="testimonio-box">
+        <!-- FOTO DE LA NOTA ORIGINAL -->
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <img src="assets/img/raul-y-bea-huerta.png" alt="Nota Bariloche2000 - Marzo 2010" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 2px solid rgba(255, 204, 0, 0.3);">
+          <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8; font-style: italic;">Bariloche2000 - Marzo 2010 (Hace 16 años)</p>
+        </div>
+        
+        <h3 style="color: var(--brillo); margin-bottom: 1.5rem; text-align: center;">Nuestra Historia</h3>
+        
+        <p style="font-style: italic; margin-bottom: 1.5rem; font-size: 1.1rem; text-align: center; color: var(--acento);">
+          "Todo lo que hicimos fue sin un peso. Esta tierra es virgen. El que quiere y tiene voluntad puede hacer un montón de cosas."
+        </p>
+        
+        <p><strong>Raúl Rivero y Beatriz Vecchio</strong> llegaron de Buenos Aires en 2003 al barrio Unión de Bariloche. Desde 2006 desarrollan su huerta orgánica y taller de costura, participando activamente en la Feria de Intercambio de Semillas y promoviendo la autosuficiencia comunitaria.</p>
+        
+        <p style="margin-top: 1.5rem; font-size: 1.05rem; line-height: 1.8; border-left: 3px solid var(--acento); padding-left: 1rem;">
+          <strong>"Lo que yo quiero profesar es transmitir con el ejemplo el mensaje que se puede ser autosuficiente. Y la autosuficiencia es participación con la naturaleza. Vos trabajás con la naturaleza y no la naturaleza para vos. En ese proceso aprendés de la naturaleza y ninguno es un esclavo del otro porque vos sos parte de la naturaleza."</strong>
+        </p>
+        
+        <p style="font-size: 0.9rem; margin-top: 1.5rem; opacity: 0.8; text-align: center;">
+          — Artículo publicado en Bariloche2000, 15 de Marzo 2010 (Actualmente la nota no esta online)
+        </p>
+        
+        <!-- ENLACE A PATREON -->
+        <div style="text-align: center; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 204, 0, 0.2);">
+          <a href="https://www.patreon.com/raulhora/posts/volver-trabajar-161259415?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank" class="btn btn-secundario" style="font-size: 1rem; padding: 0.9rem 2rem;">📰 Ver nota completa</a>
+          <p style="font-size: 0.85rem; margin-top: 0.8rem; opacity: 0.7;">
+            En Patreon: Texto completo de la nota, fotos originales y reflexión 16 años después
+          </p>
+        </div>
+      </div>
+
+      <!-- FILOSOFÍA DEL TRUEQUE -->
+      <div class="filosofia-box">
+        <h3 style="color: var(--acento); margin-bottom: 1rem;">Filosofía del Intercambio Solidario</h3>
+        <p>"Ser solidario significa ponerse como parte de un eslabón que forma una gran cadena. El trueque o intercambio es establecer un vínculo que va mucho más allá de una relación circunstancial y económica."</p>
+        <p style="margin-top: 1rem;"><strong>Un Espacio Comunitario como acción directa:</strong> Todo lo que se manufacture se expone para trocar o vender según la necesidad: pan casero, dulces, quesos, huevos, pollos, verduras, miel, productos de plantas medicinales, conservas y comidas elaboradas; etc... Algo importante de subrayar: La intension es replicar, formar <strong>¨Nodos¨</strong> de intercambio en todo el Pais y porque no al resto del mundo.</p>
+        <p style="margin-top: 1rem; font-weight: bold; color: var(--brillo);">"Si Amo a mi Hermano, Amaré a Dios; si Amo a Dios, Amaré a mi Hermano. Este es el pilar para lograr ser autosuficiente."</p>
+      </div>
+
+      <!-- GIF ANIMADO + LLAMADO A LA ACCIÓN (ACTUALIZADO) -->
+      <div class="jardin-cta">
+        <!-- GIF ANIMADO -->
+        <div class="gif-container" style="text-align: center; margin: 2rem 0;">
+          <img src="assets/img/revolucion-sustentable.gif" alt="Revolución Sustentable" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 20px rgba(127, 255, 0, 0.3);">
+        </div>
+        
+        <h3>¿Querés ser parte de esta revolución sustentable?</h3>
+        
+        <p style="font-style: italic; color: var(--brillo); margin: 1.5rem 0; font-size: 1.1rem;">
+          "No busco seguidores, busco compañeros de camino. No quiero ser maestro ni gurú. <br>Necesito acompañamiento, no que me sigan."
+        </p>
+        
+        <p><strong>Este proyecto está en etapa de propuesta.</strong> Es una idea plasmada después de décadas de investigación, sueños y aprendizaje. Nunca pude implementarla solo, y por eso busco:</p>
+        
+        <ul class="patreon-list">
+          <li>🤝 <strong>Colaboradores</strong> que deseen sumarse para construir juntos</li>
+          <li>💰 <strong>Financiamiento consciente</strong> de personas/instituciones que crean en esta visión</li>
+          <li>📄 <strong>PDF del Proyecto</strong> completo para estudiar y compartir</li>
+          <li>🌟 <strong>Red de apoyo</strong> para hacer realidad el "Jardín del Cielo"</li>
+        </ul>
+        
+        <p style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.9; font-style: italic;">
+          Nota importante: No ofrezco consultorías ni enseñanzas. Solo comparto una visión y busco quienes quieran caminar juntos hacia un mundo sin dinero, basado en el trueque solidario y la autosuficiencia comunitaria.
+        </p>
+        
+        <div class="patreon-buttons">
+          <a href="https://www.patreon.com/raulhora/posts/jardin-del-cielo-161251879?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank" class="btn btn-secundario">📄 Entérate mas acerca de la Idea/Proyecto</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección La Transformación del Águila (EXISTENTE) -->
   <section class="aguila-section">
     <div class="container">
       <h2 class="section-title">La Transformación del Águila</h2>
@@ -248,31 +556,83 @@
     </div>
   </section>
 
-   <footer class="footer">
+  <!-- SECCIÓN BIBLIOTECA (CON TARJETAS) - "Otros Recursos" ELIMINADO -->
+  <section class="biblioteca-section" id="comunidad">
+    <div class="container">
+      <h2 class="section-title">"Bases de Mi Filosofía"</h2>
+      <p class="section-subtitle">"El conocimiento no se posee se comparte; no se compite"</p>
+      
+      <div class="biblioteca-intro">
+        <p>Aquí te comparto ciertos conceptos que me apuntalaron desde jóven y me permitió ser resiliente, constante, perseverante, hasta rebelde te diré; lo intento profesar no solo con lo dicho sino forzar el intento, logran recorrer ese trecho. Como verás, para que entiendas que esto es mas que na idea o un capricho para algunos; todo esto comenzó finales de la decada de los ´90. Házte una idea, ya tengo 62 años. Todo conocimiento es una herramienta; el modo de como aplicarlas, hacen la diferencia .</p>
+      </div>
+
+      <!-- TARJETAS DE DOCUMENTOS -->
+      <div class="tarjetas-grid">
+        
+        <!-- Tarjeta 1: Conceptos de Autosuficiencia -->
+        <div class="recurso-card">
+          <h4>🧭 Conceptos y Ventajas de la Autosuficiencia</h4>
+          <p>Una reflexión filosófica profunda sobre el cambio de paradigma: de "nacer para morir" a "nacer para crecer y trascender".</p>
+          <ul class="conceptos-clave">
+            <li>✓ De la esclavitud del tiempo a ser dueño de tu ocio</li>
+            <li>✓ El trabajo que ennoblece vs. el trabajo que denigra</li>
+            <li>✓ "Si Amo a mi Hermano, Amaré a Dios"</li>
+            <li>✓ Perder el miedo a vivir sin dinero</li>
+          </ul>
+          <p class="cita-destacada">"La autosuficiencia no es ser ermitaño, es participar con la Naturaleza como co-creadores."</p>
+          <a href="https://www.patreon.com/raulhora/posts/conceptos-y-de-161240844?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank" class="btn-small">📖 Leer texto completo</a>
+        </div>
+
+        <!-- Tarjeta 2: Filosofía del Trueque -->
+        <div class="recurso-card">
+          <h4>🤝 La Granja Ecológica y el Concepto de Trueque</h4>
+          <p>El Espacio Comunitario como acción directa de intercambio solidario. Ser solidario es ponerse como parte de un eslabón que forma una gran cadena.</p>
+          <ul class="conceptos-clave">
+            <li>✓ Trueque vs. relación económica circunstancial</li>
+            <li>✓ El Espacio Comunitario como soporte laboral</li>
+            <li>✓ Producción para intercambio y venta consciente</li>
+          </ul>
+          <p class="cita-destacada">"El trueque es establecer un vínculo que va mucho más allá de una relación económica."</p>
+          <a href="https://www.patreon.com/raulhora/posts/la-granja-y-el-161245496?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank" class="btn-small">📖 Leer texto completo</a>
+        </div>
+
+        <!-- Tarjeta 3: Testimonio Bariloche 2000 -->
+        <div class="recurso-card">
+          <h4>📰 Volver a Trabajar la Tierra (2010)</h4>
+          <p>Artículo publicado en Bariloche2000 sobre tu experiencia en Unión, Bariloche. "Todo lo que hicimos fue sin un peso. Esta tierra es virgen."</p>
+          <ul class="conceptos-clave">
+            <li>✓ Huerta orgánica y gallinero familiar</li>
+            <li>✓ Feria de Intercambio de Semillas</li>
+            <li>✓ Rescate cultural de saberes ancestrales</li>
+          </ul>
+          <p class="cita-destacada">"La autosuficiencia es participación con la naturaleza. Vos trabajás con la naturaleza y no la naturaleza para vos."</p>
+          <a href="https://www.patreon.com/raulhora/posts/volver-trabajar-161259415?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank" class="btn-small">📖 Leer artículo completo</a>
+        </div>
+
+      </div>
+      <!-- "Otros Recursos" ELIMINADO -->
+
+    </div>
+  </section>
+
+  <!-- Footer (EXISTENTE) -->
+  <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        
-        <!-- COLUMNA 1: Identidad + Logo -->
         <div class="footer-col">
           <h3 class="footer-title">PORTAL DE LA LLAMA</h3>
           <p class="footer-text">Un camino hacia la autosuficiencia<br>con base espiritual y práctica</p>
-          <!-- Contenedor centrado para el logo -->
           <div class="logo-container">
             <img src="assets/img/logo-portal.png" alt="Logo Portal de la Llama" class="footer-logo">
           </div>
         </div>
-        
-        <!-- COLUMNA 2: Contacto + Soporte -->
         <div class="footer-col">
           <h3 class="footer-title">CONTACTAME</h3>
           <p class="footer-text">¿Tenés una consulta o querés compartir algo?</p>
-          
           <div class="contact-buttons">
             <a href="mailto:portaldelallama@gmail.com" class="btn-contact btn-email">📧 PORTALDELALLAMA@GMAIL.COM</a>
             <a href="https://wa.me/5493548584454?text=Hola!%20Te%20contacto%20desde%20el%20Portal%20de%20la%20Llama.%20Vi%20tu%20sitio%20web%20y%20quiero%20consultarte..." target="_blank" class="btn-contact btn-whatsapp">💬 WHATSAPP</a>
           </div>
-
-          <!-- Sección de Apoyo en línea (Horizontal) -->
           <div class="support-section">
             <div class="footer-divider">❖</div>
             <h3 class="footer-title-small">DAME UNA MANO CON ESTE PROYECTO</h3>
@@ -282,20 +642,15 @@
             </div>
           </div>
         </div>
-        
-        <!-- COLUMNA 3: Explorá más -->
         <div class="footer-col">
           <h3 class="footer-title">EXPLORÁ MÁS</h3>
           <ul class="footer-links">
-            <!-- Agregué el emoji de libro -->
             <li><a href="https://cronicasdeluritorco.github.io/" target="_blank">📖 Crónicas del Uritorco</a></li>
             <li><a href="https://flashbackradio2025.github.io/" target="_blank">📻 FlashBack Radio</a></li>
             <li><a href="https://creacionesweb1320.github.io/" target="_blank">🎨 Creaciones 13:20</a></li>
           </ul>
         </div>
-        
       </div>
-      
       <div class="footer-bottom">
         <p>© 2026 Portal de la Llama - Camino a la Autosuficiencia</p>
         <p>Hecho con ❤️ y 🔥 en Capilla del Monte, Córdoba, Argentina</p>

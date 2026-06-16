@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Energía Renovable | Portal de la Llama</title>
+  <meta name="description" content="Sistemas de energía renovable y libre: solar, eólica, biogás y geotermia. Diálogo con la naturaleza para una vida autosuficiente.">
+  
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cinzel:wght@600;700&family=Courgette&display=swap" rel="stylesheet">
+  
+  <!-- CSS principal (ruta relativa por estar en carpeta proyectos/) -->
+  <link rel="stylesheet" href="../estilo.css">
+  
+  <!-- FAVICONS (rutas relativas desde carpeta proyectos/) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="../assets/img/site.webmanifest">
+  
+  <style>
+    /* Ajustes específicos para páginas internas */
+    .page-header {
+      text-align: center;
+      padding: 10rem 2rem 4rem;
+      z-index: 1;
+      position: relative;
+    }
+    .page-header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      color: var(--brillo);
+      text-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+      margin-bottom: 0.5rem;
+    }
+    .page-header p {
+      font-family: 'Courgette', cursive;
+      font-size: 1.5rem;
+      color: var(--acento);
+    }
+    .section-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .energy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .energy-card {
+      background: rgba(20, 18, 12, 0.70);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid rgba(127, 255, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+    .energy-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(127, 255, 0, 0.2);
+      border-color: var(--acento);
+    }
+    .energy-card h4 {
+      font-family: 'Cinzel', serif;
+      color: var(--brillo);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .energy-card p, .energy-card ul {
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .energy-card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+    .energy-card ul li {
+      padding: 0.4rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .energy-card ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--acento);
+    }
+    .philosophy-box {
+      background: rgba(255, 204, 0, 0.08);
+      border-left: 4px solid var(--brillo);
+      padding: 2rem;
+      margin: 3rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      line-height: 1.8;
+    }
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+      counter-reset: step;
+    }
+    .steps-list li {
+      margin-bottom: 1.5rem;
+      padding-left: 3rem;
+      position: relative;
+      line-height: 1.7;
+    }
+    .steps-list li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      background: var(--fuego);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
+    }
+    .patreon-cta {
+      text-align: center;
+      margin: 4rem 0 2rem;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(127, 255, 0, 0.15) 100%);
+      border: 2px solid var(--fuego);
+      border-radius: 8px;
+      backdrop-filter: blur(5px);
+    }
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.2rem; }
+      .page-header p { font-size: 1.2rem; }
+      .energy-grid { grid-template-columns: 1fr; }
+    }
+	/* Oscurecer el overlay para mejor contraste de texto */
+.overlay {
+  background: rgba(0, 0, 0, 0.50);
+}
+  </style>
+</head>
+<body>
+  <!-- Video de fondo del árbol -->
+  <video autoplay muted loop playsinline class="video-fondo">
+    <source src="../assets/video/arbol-energia.mp4" type="video/mp4">
+    <img src="../assets/img/arbol-luz.jpg" alt="Árbol de luz">
+  </video>
+  <div class="overlay"></div>
+
+  <!-- Navegación simplificada -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../assets/img/cruz-orlada.png" alt="La Cruz Orlada" class="logo-icon">
+      <span class="logo-text">Portal de la Llama</span>
+    </div>
+    <a href="../index.html" class="btn-small">← Volver al Inicio</a>
+  </nav>
+
+  <!-- Header de página -->
+  <header class="page-header">
+    <h1>🌞 Energía Renovable y Libre</h1>
+    <p>"La energía no se compra, se captura. El sol, el viento y la tierra nos ofrecen lo necesario si aprendemos a dialogar con ellos."</p>
+  </header>
+
+  <!-- Contenido Principal -->
+  <section class="section-content">
+    
+    <!-- Filosofía de la Energía -->
+    <div class="philosophy-box">
+      <p><strong>La energía como derecho natural, no como mercancía.</strong> En el sistema actual, nos enseñaron que la luz, el calor y la fuerza son productos de mercado. Pero la Naturaleza nunca cobró un solo cobre por el sol que calienta la tierra, el viento que mueve las hojas o el agua que nutre las raíces. Nuestro camino no busca independencia total, sino armonía con los ciclos. La energía libre es un derecho ancestral; solo falta recordar cómo sintonizar con ella.</p>
+    </div>
+
+    <!-- Sistemas Disponibles -->
+    <h2 class="section-title">Sistemas que Dialogan con la Naturaleza</h2>
+    <div class="energy-grid">
+      
+      <div class="energy-card">
+        <h4>☀️ Energía Solar</h4>
+        <p>Captación directa de fotones para electricidad y calor.</p>
+        <ul>
+          <li>Paneles fotovoltaicos: orientación e inclinación óptima</li>
+          <li>Calefones solares de circuito abierto/cerrado</li>
+          <li>Muros Trombe para climatización pasiva</li>
+          <li>Baterías de ciclo profundo y gestión inteligente</li>
+        </ul>
+      </div>
+
+      <div class="energy-card">
+        <h4>💨 Energía Eólica</h4>
+        <p>Aprovechamiento del viento para almacenamiento local.</p>
+        <ul>
+          <li>Microturbinas de eje vertical/horizontal</li>
+          <li>Reguladores de carga y protección contra sobretensión</li>
+          <li>Integración con sistemas solares (híbridos)</li>
+          <li>Mantenimiento básico y ubicación estratégica</li>
+        </ul>
+      </div>
+
+      <div class="energy-card">
+        <h4>🔥 Biogás y Digestores</h4>
+        <p>Transformación de residuos orgánicos en energía y abono.</p>
+        <ul>
+          <li>Digestores familiares de flujo continuo</li>
+          <li>Mezcla óptima: estiércol, restos vegetales, agua</li>
+          <li>Uso directo para cocina, iluminación y calefacción</li>
+          <li>Bioabono líquido como subproducto valioso</li>
+        </ul>
+      </div>
+
+      <div class="energy-card">
+        <h4>🌍 Geotermia Pasiva</h4>
+        <p>Uso de la temperatura constante del subsuelo.</p>
+        <ul>
+          <li>Tuberías enterradas para precalentamiento de agua</li>
+          <li>Pozos canadienses para climatización de espacios</li>
+          <li>Masa térmica en bioconstrucción (tierra, piedra, agua)</li>
+          <li>Intercambio estacional de calor/frío</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Primeros Pasos Prácticos -->
+    <h2 class="section-title">Primeros Pasos: De la Teoría a la Práctica</h2>
+    <ol class="steps-list">
+      <li><strong>Evalúa tu territorio:</strong> Observa la exposición solar, la dirección predominante del viento, la disponibilidad de agua y residuos orgánicos. Una brújula y una app gratuita de trayectoria solar son suficientes para empezar.</li>
+      <li><strong>Comienza pequeño, pero con intención:</strong> Un panel de 100W + batería puede alimentar iluminación LED, cargar dispositivos y hacer funcionar una bomba de agua pequeña. La energía se escala con conciencia, no con deuda.</li>
+      <li><strong>Instala un calefón solar básico:</strong> Un tanque negro expuesto al sol con serpentín de cobre o PVC negro puede proporcionar agua caliente para cocina e higiene. Es el primer paso hacia la independencia térmica.</li>
+      <li><strong>Registra y ajusta:</strong> Lleva un cuaderno de generación vs. consumo. Anota días soleados/nublados, vientos, temperaturas. La autosuficiencia se construye con datos reales, no con suposiciones.</li>
+      <li><strong>Integra, no aísles:</strong> La energía renovable funciona mejor en red con otros sistemas: biogás + huerta, solar + bioconstrucción, eólica + almacenamiento pasivo. Todo se potencia cuando se conecta con respeto.</li>
+    </ol>
+
+    <!-- Visión de Conjunto -->
+    <h2 class="section-title">Impacto y Visión de Conjunto</h2>
+    <p>Estos sistemas no son fines en sí mismos, sino herramientas para recuperar el <strong>diálogo con los ciclos naturales</strong>. Cuando dejamos de extraer y empezamos a sintonizar, la energía deja de ser un gasto y se convierte en un flujo continuo de abundancia. El objetivo no es la independencia absoluta, sino la <strong>participación consciente</strong> con la tierra, el aire y el agua que nos sostienen.</p>
+    <p>En el marco del proyecto <em>Jardín del Cielo</em>, la energía renovable es uno de los pilares que permite sostener la huerta, la bioconstrucción, las terapias y la vida comunitaria; el propósito es fomentar redes o <strong>¨Nodos¨</strong> externos de intercambio mutuo. Es la base técnica que hace posible la filosofía.</p>
+ 
+    <!-- CTA a Patreon -->
+    <div class="patreon-cta">
+      <h3 style="font-family: 'Cinzel', serif; color: var(--brillo); margin-bottom: 1rem;">📥 Profundización Técnica y Planos</h3>
+      <p style="margin-bottom: 1.5rem;">La web muestra el camino visible. En Patreon encontrás el contenido completo para implementar con seguridad y precisión:</p>
+      <ul style="list-style: none; padding: 0; max-width: 600px; margin: 0 auto 2rem; text-align: left;">
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);"> Planos detallados de instalación solar y eólica</li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);"> Tablas de cálculo: paneles, baterías, inversores, consumo</li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);">🛠️ Lista de materiales, herramientas y proveedores regionales</li>
+        <li style="padding: 0.6rem 0; border-bottom: 1px solid rgba(127,255,0,0.2);">⚠️ Guías de seguridad eléctrica y mantenimiento preventivo</li>
+        <li style="padding: 0.6rem 0;"> Bitácora de implementación real: errores, ajustes y aciertos</li>
+      </ul>
+      <a href="https://www.patreon.com/c/raulhora" target="_blank" class="btn">🔥 Acceder al contenido completo en Patreon</a>
+      <p style="font-size: 0.85rem; margin-top: 1rem; opacity: 0.8; font-style: italic;">
+        Este material es técnico y práctico. Se comparte para quienes desean implementar con responsabilidad y conocimiento real.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Footer simplificado -->
+  <footer class="footer" style="margin-top: 0; border-top: 1px solid rgba(127, 255, 0, 0.3);">
+    <div class="container" style="text-align: center; padding: 2rem 0;">
+      <p style="font-size: 0.9rem; color: var(--texto);">© 2026 Portal de la Llama | Camino a la Autosuficiencia</p>
+      <p style="font-size: 0.85rem; color: var(--texto); opacity: 0.8; margin-top: 0.5rem;">Hecho con ❤️ y 🔥 en Capilla del Monte, Córdoba, Argentina</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
